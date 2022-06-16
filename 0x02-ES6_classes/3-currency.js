@@ -12,9 +12,9 @@ will return the attributes in the following format name (code).
 */
 
 export default class Currency {
-  constructor(name, code) {
-    this._name = name
-    this._code = code
+  constructor(code, name) {
+    this._code = code;
+    this._name = name;
   }
 
   set code(code) {
