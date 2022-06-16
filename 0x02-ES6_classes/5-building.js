@@ -1,6 +1,5 @@
 /*
 Implement a class named Building:
-
 Constructor attributes:
 sqft (Number)
 Each attribute must be stored in an “underscore”
@@ -12,7 +11,6 @@ And make sure that any class that extends from it should implement a method
 If a class that extends from it does not have a evacuationWarningMessage method,
 throw an error with the message Class extending Building must override evacuationWarningMessage
 */
-
 
 export default class Building {
   constructor(sqft) {
