@@ -14,3 +14,13 @@ interface Teacher {
 interface Directors extends Teacher {
     numberOfReports: number;
 }
+
+// task 3
+
+function printTeacher (firstName: string, lastName: string): string {
+    return `${firstName[0]}. ${lastName}`;
+}
+
+interface printTeacherFunction {
+    printTeacher(firstName: string, lastName: string): string;
+}
