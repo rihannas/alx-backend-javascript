@@ -3,13 +3,13 @@
 interface DirectorInterface {
     workFromHome(): string;
     getCoffeeBreak(): string;
-    workDirectorTask(): string;
+    workDirectorTasks(): string;
 }
 
 interface TeacherInterface {
     workFromHome(): string;
     getCoffeeBreak(): string;
-    workDirectorTask(): string;
+    workTeacherTasks(): string;
 }
 
 class Director implements DirectorInterface {
@@ -45,5 +45,20 @@ function createEmployee(salary: number | string): Teacher | Director {
         return new Teacher();
     } else {
         return new Director();
+    }
+}
+
+
+// task 6 
+
+function isDirector(employee: Director | Teacher): employee is Director {
+    return (employee) instanceof Director;
+}
+
+function executeWork(employee: Director | Teacher): string {
+    if (employee instanceof Director) {
+        return employee.workDirectorTasks();
+    } else {
+        return employee.workTeacherTasks();
     }
 }
