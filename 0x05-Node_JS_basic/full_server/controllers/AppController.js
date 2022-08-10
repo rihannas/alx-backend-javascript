@@ -1,7 +1,1 @@
-class AppController {
-  static getHomepage(request, response) {
-    response.send(200, 'Hello Holberton School!');
-  }
-}
-
-export default AppController;
+0x05-Node_JS_basic/full_server/controllers/AppController.js
