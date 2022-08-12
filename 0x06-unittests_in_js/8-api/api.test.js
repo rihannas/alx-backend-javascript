@@ -5,7 +5,7 @@ describe('basic integration testing', () => {
   describe('GET /', () => {
     it('endpoint GET /', (done) => {
       const call = {
-        url: 'http://localhost:7865',
+        url: 'http://localhost:7654',
         method: 'GET',
       };
       request(call, (error, response, body) => {
