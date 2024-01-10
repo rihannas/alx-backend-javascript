@@ -1,4 +1,5 @@
-export default function getFullResponseFromAPI(sucess) {
+// eslint-disable-next-line import/prefer-default-export
+function getFullResponseFromAPI(sucess) {
   return new Promise((resolve, reject) => {
     if (sucess) {
       resolve({ status: 200, body: 'sucess' });
@@ -7,3 +8,6 @@ export default function getFullResponseFromAPI(sucess) {
     }
   });
 }
+
+console.log(getFullResponseFromAPI(true));
+console.log(getFullResponseFromAPI(false));
