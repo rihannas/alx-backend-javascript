@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-function getResponseFromApi() {
+export default function getResponseFromApi() {
   const promise = new Promise(() => {});
   return promise;
 }
