@@ -1,4 +1,4 @@
-import { uploadPhoto, createUser } from './utils.js';
+import { uploadPhoto, createUser } from './utils';
 
 function handleProfileSignup() {
   // Use Promise.all to collectively resolve promises
@@ -9,7 +9,7 @@ function handleProfileSignup() {
       const { firstName, lastName } = userResult;
 
       // Log the extracted information to the console
-      console.log(photoBody, firstName, lastName);
+      console.log(`${photoBody} ${firstName} ${lastName}`);
     })
     .catch(() => {
       // Log an error message if there is an issue
