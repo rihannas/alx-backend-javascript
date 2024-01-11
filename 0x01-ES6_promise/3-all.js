@@ -1,8 +1,8 @@
-import { uploadPhoto, createUser } from './utils.js';
+import { uploadPhoto, createUser } from './utils';
 
 function handleProfileSignup() {
   // Use Promise.all to collectively resolve promises
-  Promise.all([uploadPhoto(), createUser()])
+  return Promise.all([uploadPhoto(), createUser()])
     .then(([photoResult, userResult]) => {
       // Extract information from resolved promises
       const { body: photoBody } = photoResult;
@@ -16,6 +16,3 @@ function handleProfileSignup() {
       console.log('Signup system offline');
     });
 }
-
-// Call the function to initiate the process
-handleProfileSignup();
