@@ -1,6 +1,6 @@
 import { uploadPhoto, createUser } from './utils.js';
 
-function handleProfileSignup() {
+export default function handleProfileSignup() {
   // Use Promise.all to collectively resolve promises
   return Promise.all([uploadPhoto(), createUser()])
     .then(([photoResult, userResult]) => {
