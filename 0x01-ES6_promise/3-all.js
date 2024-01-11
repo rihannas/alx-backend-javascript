@@ -1,4 +1,4 @@
-import { uploadPhoto, createUser } from './utils';
+import { uploadPhoto, createUser } from './utils.js';
 
 function handleProfileSignup() {
   // Use Promise.all to collectively resolve promises
