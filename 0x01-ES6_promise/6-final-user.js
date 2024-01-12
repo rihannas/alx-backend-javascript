@@ -9,7 +9,9 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
 
   return Promise.allSettled([userPromise, photoPromise]).then((results) => {
     // Map the results to the required structure
-    return results;
+    return results.map((result) => ({
+      status: result.status,
+      value: result.status === 'fulfilled' ? result.value : result.reason,
+    }));
   });
 }
-console.log(handleProfileSignup('bob', 'ng', 'bob.png'));
