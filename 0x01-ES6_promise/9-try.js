@@ -1,4 +1,4 @@
-import divideFunction from './8-try.js';
+import divideFunction from './8-try';
 export default function guardrail(mathFunction) {
   const queue = [];
   try {
